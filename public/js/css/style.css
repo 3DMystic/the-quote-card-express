@@ -1,32 +1,44 @@
 body {
-    background-image: url('/brickwall.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100%;
-    min-width: 100%;
+    background-color: black;
 }
 
 .main {
     display: flex;
-    align-items: center;
     justify-content: center;
-    border: 2px solid #ffffff; ;
+    align-items: center;
     color: #ffffff;
     height: 100vh;
     width: 100vw;
     text-align: center;
 }
 
+.background-img {
+    background-image: url('/brickwall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -1;
+    position: fixed;
+}
 
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #ffffff;
+    width: 90%;
+    height: 90%;
+    padding: 20px;
+}
 
 .quote-text {
-    flex-wrap: wrap;
-    font-size: 1.5em;
-    margin-bottom: auto;
     font-size: 2em;
-    height: 100%;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 q:before {
@@ -34,8 +46,8 @@ q:before {
     font-weight: bold;
     font-size: 2.5em;
     position: relative;
-    top: -40px;
-    left: -50px;
+    top: -10rem;
+    left: 1rem;
 }
 
 q:after {
@@ -43,11 +55,44 @@ q:after {
     font-weight: bold;
     font-size: 2.5em;
     position: relative;
-    bottom: -120px;
-    right: -50px;
+    bottom: -12rem;
+    right: -1rem;
 }
 
 #author {
-    margin: 20px 0;
-    font-size: 1.2em ;
+    margin: 30px 0;
+    font-size: 1em ;
+}
+
+@media (min-width: 600px) {
+    .background-img {
+        min-width: 100%;
+    }
+    .quote-text {
+        font-size: 2.5em;
+    }
+
+    q:before, q:after {
+        font-size: 2.5em;
+    }
+
+    q::before {
+        top: -8rem;
+        left: 1.5rem;
+    }
+
+    q::after {
+        bottom: -10rem;
+        right: 1rem;
+    }
+
+    #author {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 800px) {
+    .background-img {
+        
+    }
 }
