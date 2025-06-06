@@ -13,7 +13,7 @@ body {
 }
 
 .background-img {
-    background-image: url('/public/brickwall.jpg');
+    background-image: url('/public/jonatan-pie-3l3RwQdHRHg-unsplash.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,11 +88,5 @@ q:after {
 
     #author {
         font-size: 1em;
-    }
-}
-
-@media (min-width: 800px) {
-    .background-img {
-        
     }
 }
